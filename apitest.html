@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	
+	<body>
+	
+		<script>
+			
+			function Welcome(){
+				$.ajax({
+					url: 'https://localhost:5001/api/transactions',
+					type: 'GET',
+					success: function (data) {
+						console.log(data);
+						document.write(data+"<br/>");
+						
+					}
+				});
+			}
+			
+			function RandomNumber(){
+				$.ajax({
+					url: 'https://localhost:5001/api/transactions/random',
+					type: 'GET',
+					success: function (data) {
+						console.log(data);
+						document.write(data+"<br/>");
+						
+					}
+				});
+			}
+			
+			function RandomChar(){
+				$.ajax({
+					url: 'https://localhost:5001/api/transactions/char',
+					type: 'GET',
+					success: function (data) {
+						console.log(data);
+						document.write(data+"<br/>");
+						
+					}
+				});
+			}
+		
+
+			Welcome();
+			RandomNumber();
+			RandomChar();
+		
+		</script>
+	
+	</body>
+
+
+</html>
